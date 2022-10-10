@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <script
+      defer
+      src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+    ></script>
+    <link rel="stylesheet" href="/dist/css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script defer src="/main.mjs" type="module"></script>
+    <title>.hello social</title>
+  </head>
+  <body class="d-flex flex-column min-vh-100">
+    <header>
+      <div class="logo">.hello social</div>
+      <div class="container">
+        <nav>
+          <div class="primary-nav">
+            <ul>
+              <li><a href="/index.html">home</a></li>
+              <li class="newpostbutton">
+                <a href="#">new post</a>
+              </li>
+              <li class="searchbutton">
+                <a href="#">search</a>
+              </li>
+              <li class="profilebutton"><a href="/profile.html">profile</a></li>
+              <li class="login">login</li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+      <div class="line"></div>
+    </header>
+
+    <main class="my-auto mb-5">
+
+      <div class="container mainhero mt-5 text-center">
+        <h1>Welcome to .hello!</h1>
+        <p class="mt-5">
+          A social media experiment for students of Frontend Development at
+          Noroff.
+        </p>
+
+        <p class="mt-5">
+          <a href="/login.html">
+            <button class="btn btn-lg me-5">Log in</button></a
+          >
+          <a href="/register.html">
+            <button class="btn btn-lg">Register</button></a
+          >
+        </p>
+      </div>
+      <div class="container mt-5 mainmain">
+        <div class="row mx-3">
+          <div class="col-md-12 col-lg-9">
+            <div class="row mb-3 p-3 brd new-box">
+              <div class="col">
+                <div class="mb-1 fs-4 fw-bold">create new post</div>
+                <form id="newpost">
+                  <label for="titlefield" class="mt-1">Title:</label>
+                  <input
+                    type="text"
+                    name="title"
+                    id="titlefield"
+                    class="form-control mt-1"
+                    placeholder="your title"
+                    required
+                  />
+                  <label for="imagefield" class="mt-3">Image (optional):</label>
+                  <input
+                    type="url"
+                    name="media"
+                    title="Please provide an image URL"
+                    placeholder="jpg, jpeg, png or svg-format"
+                    id="imagefield"
+                    class="form-control mt-1"
+                  />
+                  <label for="bodyfield" class="mt-3">Post content:</label>
+                  <textarea
+                    class="mt-1 mb-1 form-control mb-1"
+                    name="body"
+                    id="bodyfield"
+                    placeholder="your content"
+                    required
+                  ></textarea>
+                  <button type="submit" class="btn btn-lg mt-3">submit</button>
+                </form>
+              </div>
+            </div>
+
+            <!--SEARCH-->
+
+            <div class="row mb-3 p-3 brd search-box">
+              <div class="col">
+                
+                <form id="searchform">
+                  <label for="searchfield" class="mt-1 mb-3 fs-3">search:</label>
+                  <input
+                    type="text"
+                    id="searchfield"
+                    class="form-control mt-1 mb-1"
+                    placeholder="what are you looking for?"
+                    required
+                  />
+
+                  <input
+                    type="radio"
+                    id="radioUsername"
+                    value="Username"
+                    name="searchbox"
+                  />
+                  <label for="radioUsername" class="me-3 fs-5 mt-2">username</label>
+
+                  <input
+                    type="radio"
+                    id="radioTitle"
+                    value="Title"
+                    name="searchbox"
+                    checked="checked"
+                  />
+                  <label for="radioTitle" class="me-3 fs-5 mt-2">title</label>
+
+                  <input
+                    type="radio"
+                    id="radioContent"
+                    value="Content"
+                    name="searchbox"
+                  />
+                  <label for="radioContent" class="me-3 fs-5 mt-2">content</label>
+                  <button type="submit" class="btn btn-lg">search</button>
+                </form>
+              </div>
+            </div>
+
+            
+            <!-- POSTS GO HERE -->
+
+            <section>
+              <div class="row mainfront">
+               
+
+                <div class="col-12 p-3 mb-3 brd content_box">
+                  <div class="topline d-flex justify-content-between">
+                    <div class="empty my-auto greeting"></div>
+                  <div class="text-start mt-2 mb-2 fw-bold sort-box">
+                  Sort by:  <a href="/index.html?sort=desc"> Most recent </a> | <a href="/index.html?sort=asc">Oldest  </a>
+                  
+                  </div>
+                  </div>
+              </div>
+            </section>
+
+            <!-- POSTS STOP HERE -->
+            <div class="center">
+              <button
+                class="load-more-posts btn btn-lg mt-3 mb-4"
+                id="morebutton"
+              >
+                LOAD MORE
+              </button>
+            </div>
+          </div>
+
+          <div
+            class="col d-md-none d-lg-block ms-md-5 p-3 mt-3 mt-md-0 text-start brd mb-5"
+          >
+            <div class="mb-3 fs-4 fw-bold text-md-center">latest users:</div>
+            <div class="users-container"></div>
+          </div>
+        </div>
+      </div>
+
+    </main>
+
+    <footer class="mt-auto">
+      <div class="container">
+        <div class="row">
+          <div class="col text-center">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam
+            optio accusantium facere ipsum sunt in, modi consequuntur dolor odit
+            placeat sapiente rerum odio, fugiat corporis a repellendus dicta
+            quidem amet.
+          </div>
+          <div class="col text-center">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur,
+            sunt. Rerum sequi minus adipisci voluptates. Inventore, iure
+            reiciendis accusantium molestias consectetur aliquam, obcaecati,
+            assumenda laboriosam quas maxime itaque veritatis beatae.
+          </div>
+          <div class="col text-center">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod,
+            delectus suscipit quo assumenda ipsum corporis, inventore enim
+            maxime reprehenderit laborum tempore necessitatibus possimus fugit.
+            Adipisci omnis expedita assumenda cumque laboriosam!
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

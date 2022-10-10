@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <script
+      defer
+      src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+    ></script>
+    <link rel="stylesheet" href="/dist/css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script defer src="/main.mjs" type="module"></script>
+    <title>.hello social</title>
+  </head>
+  <body class="d-flex flex-column min-vh-100">
+    <header>
+      <div class="logo">.hello social</div>
+      <div class="container">
+        <nav>
+          <div class="primary-nav">
+            <ul>
+              <li><a href="/index.html">home</a></li>
+              <li class="login"><a href="/login.html"> login </a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+      <div class="line"></div>
+    </header>
+
+    <main class="my-auto">
+      <section>
+        <div class="row">
+          <div class="col-12">
+            <div class="col w-50 mx-auto p-5">
+              <div class="login text-center fs-2 fw-bold mb-3">
+                register new account
+              </div>
+              <form id="registerform" method="post" action="/auth/register">
+                <label for="userName" class="form-label">Username</label>
+                <input
+                  type="text"
+                  name="name"
+                  class="form-control"
+                  id="userNameInput"
+                  placeholder="Username"
+                  pattern="^[\w]+$"
+                  title="Username must only contain lowercase and uppercase letters, numbers and underscore (_). Example: good_user_name123"
+                  required
+                />
+
+                <label for="avatarInput" class="form-label mt-3"
+                  >Profile-picture (optional)</label
+                >
+                <input
+                  type="url"
+                  name="avatar"
+                  class="form-control"
+                  id="avatarInput"
+                  placeholder="URL for profile-photo"
+                />
+
+                <label for="emailInput" class="form-label mt-3">Email</label>
+                <input
+                  type="email"
+                  name="email"
+                  class="form-control"
+                  id="emailInput"
+                  pattern="^[\w\-.]+@(stud.)?noroff.no$"
+                  placeholder="@stud.noroff.no"
+                  title="Your email must end with either @noroff.no or @stud.noroff.no"
+                  required
+                />
+
+                <label for="passwordInput" class="form-label mt-3"
+                  >Password</label
+                >
+                <input
+                  type="password"
+                  name="password"
+                  class="form-control"
+                  id="passwordInput"
+                  minlength="8"
+                  placeholder="Minimum 8 characters"
+                  title="Your password must contain minimum 8 characters."
+                  required
+                />
+
+                <div class="error mt-5">ERROR</div>
+
+                <button class="btn btn-lg mt-5 w-100 regbtn">
+                  Register Account
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="mt-auto">
+      <div class="container">
+        <div class="row">
+          <div class="col text-center">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam
+            optio accusantium facere ipsum sunt in, modi consequuntur dolor odit
+            placeat sapiente rerum odio, fugiat corporis a repellendus dicta
+            quidem amet.
+          </div>
+          <div class="col text-center">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur,
+            sunt. Rerum sequi minus adipisci voluptates. Inventore, iure
+            reiciendis accusantium molestias consectetur aliquam, obcaecati,
+            assumenda laboriosam quas maxime itaque veritatis beatae.
+          </div>
+          <div class="col text-center">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod,
+            delectus suscipit quo assumenda ipsum corporis, inventore enim
+            maxime reprehenderit laborum tempore necessitatibus possimus fugit.
+            Adipisci omnis expedita assumenda cumque laboriosam!
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
