@@ -1,5 +1,3 @@
-import { loginUser } from "./loginUser.mjs";
-
 const errorField = document.querySelector(".errormsg");
 
 export function checkLoginSuccess(jsonResults) {
