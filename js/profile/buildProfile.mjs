@@ -11,7 +11,7 @@ export function buildProfile(jsonResults) {
   document.getElementById(
     "profilecard"
   ).innerHTML = `<div class="col-md-3 me-3 text-center mb-sm-4 mb-4 mb-md-0 profileimage">
-      <img src="${avatar}" class="img-fluid profile-px rounded-4" onerror="this.src='${defaultPhoto}'" />
+      <img src="${avatar || defaultPhoto}" class="img-fluid profile-px rounded-4" onerror="this.src='${defaultPhoto}'" />
       </div>
       
       <div class="col">
