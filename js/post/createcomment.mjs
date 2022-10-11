@@ -1,5 +1,4 @@
 import { baseURL } from "../baseVariables.mjs";
-import { options } from "../baseVariables.mjs";
 
 const form = document.getElementById("commentpost");
 
