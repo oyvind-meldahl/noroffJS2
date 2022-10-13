@@ -1,5 +1,7 @@
 import { baseURL } from "/js/baseVariables.mjs";
 
+/** Takes post-details and submits to server. If success, the page reloads to display new post in feed. */
+
 export async function createNewPost(newPostDetails) {
   const results = await fetch(baseURL + "posts/", {
     method: "POST",

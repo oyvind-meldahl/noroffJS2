@@ -1,5 +1,7 @@
 import { baseURL } from "/js/baseVariables.mjs";
 
+/** Takes information provided by user and sends to server for validation. If success it will send user to login-page. Else, show error to user. */
+
 export async function registerUser(userDetails) {
   const result = await fetch(baseURL + "auth/register", {
     method: "POST",

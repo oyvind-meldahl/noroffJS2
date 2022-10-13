@@ -10,6 +10,8 @@ localStorage.setItem("postID", urlID);
 
 let postHtml = document.querySelector(".post");
 
+/** Displays a single post based on information passed in from jsonResults. Decides on avatar and media-use as well. */
+
 export function displaySingle(jsonResults) {
   if (jsonResults.author.name == localStorage.getItem("name")) {
     var ownPost = true;

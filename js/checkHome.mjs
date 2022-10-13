@@ -1,3 +1,5 @@
+/** Checks the user when he is on index.html and decides if user is logged in or not. Action is then taken. */
+
 export function checkHome() {
   const loginMenu = document.querySelector(".login");
   const mainMain = document.querySelector(".mainmain");

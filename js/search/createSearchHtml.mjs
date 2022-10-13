@@ -2,6 +2,8 @@ import { defaultPhoto } from "/js/baseVariables.mjs";
 
 const frontMain = document.querySelector(".mainfront");
 
+/** Makes html based on the data based in from controlSearch() */
+
 export function createSearchHtml(result) {
   console.log(result);
 

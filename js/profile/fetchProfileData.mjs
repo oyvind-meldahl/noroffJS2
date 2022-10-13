@@ -10,6 +10,8 @@ if (profileName == null) {
   profileName = localStorage.getItem("name");
 }
 
+/** Gets information about the user from the server. Passes this on to buildProfile() which then starts to build the site. */
+
 export async function getProfileData() {
   const results = await fetch(
     baseURL +

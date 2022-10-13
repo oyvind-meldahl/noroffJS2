@@ -2,6 +2,8 @@ import { defaultPhoto } from "../baseVariables.mjs";
 
 const profilePosts = document.querySelector(".profileposts");
 
+/** Populates the profile-page with relevant users posts. Sorts them in the correct order. */
+
 export function buildListofPosts(jsonResults) {
   jsonResults.posts.sort((a, b) => b.id - a.id);
 

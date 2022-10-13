@@ -4,6 +4,8 @@ let urlPost = window.location.search;
 const urlParams = new URLSearchParams(urlPost);
 let urlUser = urlParams.get("user");
 
+/** Listens out for a user wanting to follow or unfollow a profile and then starts the relevant function. */
+
 export function listenFollowProfile() {
   let button = document.querySelector(".follow");
   button.addEventListener("click", function () {
@@ -14,6 +16,8 @@ export function listenFollowProfile() {
     submitUnfollowProfile();
   });
 }
+
+/** Lets the user follow a profile. */
 
 export async function submitFollowProfile() {
   const results = await fetch(baseURL + "profiles/" + urlUser + "/follow", {
@@ -28,6 +32,8 @@ export async function submitFollowProfile() {
     window.location.reload();
   }
 }
+
+/** Lets the user unfollow a profile. */
 
 export async function submitUnfollowProfile() {
   const results = await fetch(baseURL + "profiles/" + urlUser + "/unfollow", {

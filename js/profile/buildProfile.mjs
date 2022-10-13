@@ -4,6 +4,8 @@ import { defaultPhoto } from "../baseVariables.mjs";
 import { listenFollowProfile } from "./followProfile.mjs";
 import { showOrHide } from "./showHideFollow.mjs";
 
+/** Builds the top part of a user-profile. Information about the user. */
+
 export function buildProfile(jsonResults) {
   let { name, email, avatar } = jsonResults;
   let { posts, followers, following } = jsonResults._count;

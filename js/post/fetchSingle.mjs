@@ -8,6 +8,8 @@ let urlID = urlParams.get("id");
 
 localStorage.setItem("postID", urlID);
 
+/** Gets a single post from the server. */
+
 export async function fetchSinglePost() {
   const results = await fetch(
     baseURL + "posts/" + urlID + "?_author=true&_comments=true&_reactions=true",

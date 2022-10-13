@@ -4,6 +4,8 @@ let urlPost = window.location.search;
 const urlParams = new URLSearchParams(urlPost);
 let urlID = urlParams.get("id");
 
+/** Sends the details of the comment passed to us from listenComment() to the server. */
+
 export async function createNewComment(commentDetails) {
   const results = await fetch(baseURL + "posts/" + urlID + "/comment", {
     method: "POST",

@@ -1,5 +1,7 @@
 import { createSearchHtml } from "./createSearchHtml.mjs";
 
+/** Takes the database of posts which is pre-gathered and searches it on one of three categories. */
+
 export function handleNameControlInput(inputValue, searchDB) {
   const nameControl = document.getElementById("searchfield");
   const radioUser = document.getElementById("radioUsername");

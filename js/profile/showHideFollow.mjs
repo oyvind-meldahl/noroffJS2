@@ -1,3 +1,5 @@
+/** This takes care of when follow and unfollow is displayed based on who you are already following. Exludes yourself. */
+
 export function showOrHide(jsonResults) {
   const found = jsonResults.followers.some(
     (follower) => follower.name === localStorage.getItem("name")

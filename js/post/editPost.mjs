@@ -4,6 +4,8 @@ let postID = localStorage.getItem("postID");
 
 const form = document.getElementById("editpost");
 
+/** When the user wants to edit a post, the fields are already filled out with the correct information. */
+
 export function fillFields() {
   document.querySelector(".edit-box").style.display = "none";
   document.querySelector(".edit-box").style.display = "block";
@@ -14,6 +16,8 @@ export function fillFields() {
   document.getElementById("editbodyfield").value = localStorage.getItem("body");
   sendData();
 }
+
+/** Listens for the two buttons, reset and submit and acts on them. */
 
 function sendData() {
   form.addEventListener("reset", (event) => {

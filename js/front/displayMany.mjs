@@ -5,6 +5,8 @@ import { defaultPhoto } from "/js/baseVariables.mjs";
 const frontMain = document.querySelector(".mainfront");
 let latestUsers = new Set();
 
+/** Takes results from server and processes them. First adds latestUsers to a Set to be processed later. Checks for any images and missing avatars, and then creates HTML based on this. */
+
 export function displayManyPosts(jsonResults) {
   for (let i = 0; i < jsonResults.length; i++) {
     latestUsers.add(jsonResults[i].author.name);
@@ -50,6 +52,6 @@ export function displayManyPosts(jsonResults) {
         </div>
         `;
   }
-  heartLike();
+
   displayLatestUsers(latestUsers);
 }

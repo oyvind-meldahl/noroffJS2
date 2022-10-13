@@ -1,6 +1,8 @@
 import { baseURL } from "/js/baseVariables.mjs";
 import { checkLoginSuccess } from "./checkLoginSuccess.mjs";
 
+/** Takes login-information and sends to server for validation. Passes results to checkLoginSuccess to decide action. */
+
 export async function loginUser(passDetails) {
   const result = await fetch(baseURL + "auth/login", {
     method: "POST",

@@ -1,3 +1,5 @@
+/** Creates html based on jsonResults. */
+
 export function displayComments(jsonResults) {
   let commentHtml = document.querySelector(".comments");
 

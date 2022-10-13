@@ -1,5 +1,7 @@
 import { createNewComment } from "./createcomment.mjs";
 
+/** Listens for the user to submit a comment. Passes data to createNewComment(). */
+
 export function listenComment() {
   const form = document.getElementById("commentpost");
 

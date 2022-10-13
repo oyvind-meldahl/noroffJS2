@@ -1,5 +1,7 @@
 import { loginUser } from "./loginUser.mjs";
 
+/** Listens for user submitting login-form, and passes details of said form to loginUser() */
+
 export function listenLogin() {
   const form = document.getElementById("login");
 

@@ -1,3 +1,5 @@
+/** Sets "create new post" and "search" boxes to hidden. Listens out for click to display said boxes. And hides them again if clicked again. */
+
 export function boxVisibility() {
   let searchButton = document.querySelector(".searchbutton");
   let searchBoxVisible = false;

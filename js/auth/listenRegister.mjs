@@ -1,5 +1,7 @@
 import { registerUser } from "./registerUser.mjs";
 
+/** Listens for user submitting register-form, and passes details of said form to registerUser() */
+
 export function listenRegister() {
   const form = document.getElementById("registerform");
 

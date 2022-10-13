@@ -2,6 +2,8 @@ import { handleNameControlInput } from "./controlSearch.mjs";
 import { baseURL } from "/js/baseVariables.mjs";
 import { options } from "/js/baseVariables.mjs";
 
+/** As soon as the frontpage is loaded, a copy of all posts and users are downloaded in the background to let the user search. */
+
 export function searchFunction() {
   fetchSearchDB();
 
@@ -19,6 +21,8 @@ export function searchFunction() {
     createSearchResults(searchDB);
   }
 }
+
+/** User types in search-term, activates handleNameControlInput() in createSearchHtml */
 
 function createSearchResults(searchDB) {
   let form = document.getElementById("searchform");

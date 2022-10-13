@@ -11,6 +11,8 @@ if (urlSort == null) {
   urlSort = "desc";
 }
 
+/** Grabs a list of posts of the server. We as can set the limit and offset in listenLoadMore(). */
+
 export async function fetchManyPosts(limit, offset) {
   const results = await fetch(
     baseURL +

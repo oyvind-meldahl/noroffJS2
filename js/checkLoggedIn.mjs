@@ -14,6 +14,8 @@ if (!token && path === "/index.html") {
   mainHero.style.display = "block";
 }
 
+/** Checks if user is logged in, and clears the localStorage if user logs out. */
+
 export function checkLoggedIn() {
   const loginMenu = document.querySelector(".login");
   if (localStorage.getItem("accessToken") !== null) {

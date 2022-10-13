@@ -1,5 +1,6 @@
-import { buildProfile } from "./buildProfile.mjs";
 import { defaultPhoto } from "../baseVariables.mjs";
+
+/** Builds a list of followers and friends on the page based on jsonResults. */
 
 export function buildListofFriends(jsonResults) {
   for (let i = 0; i < jsonResults.followers.length; i++) {

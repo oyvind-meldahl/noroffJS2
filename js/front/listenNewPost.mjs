@@ -1,5 +1,7 @@
 import { createNewPost } from "./createNewPost.mjs";
 
+/** Listens for the user to submit the form for a new post. Sends details to createNewPost() */
+
 export function listenNewPost() {
   const form = document.getElementById("newpost");
 
