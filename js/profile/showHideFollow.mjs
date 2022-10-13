@@ -1,9 +1,7 @@
 export function showOrHide(jsonResults) {
-  for (let i = 0; i < jsonResults.followers.length; i++) {
-    var found = jsonResults.followers[i].name.includes(
-      localStorage.getItem("name")
-    );
-  }
+  const found = jsonResults.followers.some(
+    (follower) => follower.name === localStorage.getItem("name")
+  );
 
   const followbutton = document.querySelector(".follow");
   const unfollowbutton = document.querySelector(".unfollow");
