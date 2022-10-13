@@ -5,8 +5,8 @@ export function showOrHide(jsonResults) {
     );
   }
 
-  let followbutton = document.querySelector(".follow");
-  let unfollowbutton = document.querySelector(".unfollow");
+  const followbutton = document.querySelector(".follow");
+  const unfollowbutton = document.querySelector(".unfollow");
   if (found === true) {
     followbutton.classList.add("hidden");
     unfollowbutton.classList.remove("hidden");

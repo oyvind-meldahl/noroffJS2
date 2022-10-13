@@ -1,7 +1,4 @@
 import { baseURL } from "../baseVariables.mjs";
-import { options } from "../baseVariables.mjs";
-
-const form = document.getElementById("commentpost");
 
 let urlPost = window.location.search;
 const urlParams = new URLSearchParams(urlPost);

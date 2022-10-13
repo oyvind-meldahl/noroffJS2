@@ -1,26 +1,41 @@
+import { defaultPhoto } from "/js/baseVariables.mjs";
+
 const frontMain = document.querySelector(".mainfront");
 
 export function createSearchHtml(result) {
+  console.log(result);
+
   frontMain.innerHTML = "";
 
   if (result.length != 0) {
     for (let i = 0; i < result.length; i++) {
+      const { created, id, title, body, media } = result[i];
+      const { comments } = result[i]._count;
+      const { name, avatar } = result[i].author;
+
+      if (result[i].media == "") {
+        var emptyImageClass = "hidden";
+      } else {
+        var emptyImageClass = "";
+      }
+
+      let newTime = new Date(created).toLocaleString("en-GB");
       frontMain.innerHTML += `
         <div class="col-12 p-3 mb-3 brd content_box">
         <div class="topline d-flex justify-content-between">
         <div class="text-start mt-3 fw-bold">
-        <a href="/profile.html?user=${result[i].author.name}">
-        <img src=" ${result[i].author.avatar}" width="50" height="50" class="me-3" alt="profile-photo">
-       ${result[i].author.name}</a> ${result[i].created}</div> 
+        <a href="/profile.html?user=${name}">
+        <img src=" ${avatar}" width="50" height="50" class="me-3" alt="profile-photo" onerror="this.src='${defaultPhoto}'">
+       ${name}</a> ${newTime}</div> 
        
         </div>
-        <div class="post-title title${result[i].id} mt-3 fw-bold"><a href="/post.html?id=${result[i].id}"> ${result[i].title}</div>
+        <div class="post-title title${id} mt-3 fw-bold"><a href="/post.html?id=${id}"> ${title}</div>
         <div id="image-holder">
-        <img src="${result[i].media}" class="image my-3 "></div> 
-        <div class="my-2 body-content body${result[i].id}"> ${result[i].body}</a></div>
+        <img src="${media}" class="image ${emptyImageClass} my-3 "></div> 
+        <div class="my-2 body-content body${id}"> ${body}</a></div>
         <div class="bottomline">
-        <div class="like"><span class="heart"> &#9829; </span>${result[i]._count.reactions}</div>
-        <div class="comments-title">comments: ${result[i]._count.comments}</div>
+        <div class="like"></div>
+        <div class="comments-title">comments: ${comments}</div>
         </div>
         </div>
       `;

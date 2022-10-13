@@ -33,7 +33,7 @@ export function displayManyPosts(jsonResults) {
         <div class="topline d-flex justify-content-between">
         <div class="text-start mt-3 fw-bold">
         <a href="/profile.html?user=${name}">
-        <img src=" ${avatar}" width="50" height="50" class="me-3 profile-photo" alt="profile-photo" onerror="this.src='${defaultPhoto}'">
+        <img src="${avatar}" width="50" height="50" class="me-3 profile-photo" alt="profile-photo" onerror="this.src='${defaultPhoto}'">
        ${name}</a> ${newTime}</div> 
         <div class="options rigth fw-light">${idField}</div>
         </div>
