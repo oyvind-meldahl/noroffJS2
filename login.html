@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <script
+      defer
+      src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+    ></script>
+    <link rel="stylesheet" href="/dist/css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script defer src="/main.mjs" type="module"></script>
+    <title>.hello social</title>
+  </head>
+  <body class="d-flex flex-column min-vh-100">
+    <header>
+      <div class="logo">.hello social</div>
+      <div class="container">
+        <nav>
+          <div class="primary-nav">
+            <ul>
+              <li><a href="/index.html">home</a></li>
+              <li class="login">login</li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+      <div class="line"></div>
+    </header>
+
+    <main class="my-auto">
+      <div class="row">
+        <div class="col-12">
+          <div class="col w-50 mx-auto p-5">
+            <div class="login text-center fs-2 fw-bold mb-3">
+              please sign in
+            </div>
+            <form id="login">
+              <label for="emailInput" class="form-label">Email adress</label>
+              <input
+                type="email"
+                name="email"
+                class="form-control"
+                id="emailInput"
+                placeholder="yourmail@mail.com"
+                required
+              />
+              <label for="passwordInput" class="form-label mt-3"
+                >Password</label
+              >
+              <input
+                type="password"
+                name="password"
+                class="form-control"
+                id="passwordInput"
+                placeholder="your password"
+                required
+              />
+              <div class="errormsg mt-5 text-center"></div>
+              <button type="submit" class="btn btn-lg mt-5 w-100 loginbtn">
+                Sign In
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="row">
+          <div class="col text-center">
+            No account?
+            <a href="/register.html" class="testvalue">Sign up here!</a>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="mt-auto">
+      <div class="container">
+        <div class="row">
+          <div class="col text-center">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam
+            optio accusantium facere ipsum sunt in, modi consequuntur dolor odit
+            placeat sapiente rerum odio, fugiat corporis a repellendus dicta
+            quidem amet.
+          </div>
+          <div class="col text-center">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur,
+            sunt. Rerum sequi minus adipisci voluptates. Inventore, iure
+            reiciendis accusantium molestias consectetur aliquam, obcaecati,
+            assumenda laboriosam quas maxime itaque veritatis beatae.
+          </div>
+          <div class="col text-center">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod,
+            delectus suscipit quo assumenda ipsum corporis, inventore enim
+            maxime reprehenderit laborum tempore necessitatibus possimus fugit.
+            Adipisci omnis expedita assumenda cumque laboriosam!
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

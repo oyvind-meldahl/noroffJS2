@@ -1,0 +1,19 @@
+import { createNewPost } from "./createNewPost.mjs";
+
+/** Listens for the user to submit the form for a new post. Sends details to createNewPost() */
+
+export function listenNewPost() {
+  const form = document.getElementById("newpost");
+
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const form = event.target;
+    const formData = new FormData(form);
+    const newPostDetails = Object.fromEntries(formData.entries());
+    if (newPostDetails.media === "") {
+      delete newPostDetails.media;
+    }
+    console.log(newPostDetails);
+    createNewPost(newPostDetails);
+  });
+}

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <script
+      defer
+      src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+    ></script>
+    <link rel="stylesheet" href="/dist/css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script defer src="/main.mjs" type="module"></script>
+    <title>.hello social</title>
+  </head>
+  <body class="d-flex flex-column min-vh-100">
+    <header>
+      <div class="logo">.hello social</div>
+      <div class="container">
+        <nav>
+          <div class="primary-nav">
+            <ul>
+              <li><a href="/index.html">home</a></li>
+
+              <li><a href="/profile.html">profile</a></li>
+              <li class="login">login</li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+      <div class="line"></div>
+    </header>
+
+    <main class="mb-5">
+      <div class="container mt-5">
+        <div class="row mx-3" id="profilecard"></div>
+        <div class="row mx-3 mt-4">
+          <div class="col-3 p-3 me-3 d-none d-sm-none d-md-block brd mb-3">
+            <div class="mb-3 fs-4 fw-bold text-md-center">Followers:</div>
+            <div class="followers-container"></div>
+
+            <div class="mb-3 fs-4 fw-bold text-md-center mt-5">Following:</div>
+            <div class="following-container"></div>
+          </div>
+          <div class="col">
+            <div class="row profileposts">
+              <div class="row mb-3 p-3 brd edit-box hidden">
+                <div class="col">
+                  <div class="mb-3 fs-4 fw-bold">edit post</div>
+                  <form id="editpost">
+                    <label for="edittitlefield" class="mt-1">Title:</label>
+                    <input
+                      type="text"
+                      id="edittitlefield"
+                      class="form-control mt-1"
+                      required
+                    />
+                    <label for="editmediafield" class="mt-3"
+                      >Image (optional):</label
+                    >
+                    <input
+                      type="text"
+                      id="editmediafield"
+                      class="form-control mt-1"
+                    />
+                    <label for="editbodyfield" class="mt-3"
+                      >Post content:</label
+                    >
+                    <textarea
+                      class="mt-1 form-control mb-1"
+                      id="editbodyfield"
+                      required
+                    ></textarea>
+                    <button type="submit" class="btn btn-lg mt-3 successbutton">
+                      submit
+                    </button>
+                    <button type="reset" class="btn btn-lg mt-3 cancelbutton">
+                      cancel
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="mt-auto">
+      <div class="container">
+        <div class="row">
+          <div class="col text-center">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam
+            optio accusantium facere ipsum sunt in, modi consequuntur dolor odit
+            placeat sapiente rerum odio, fugiat corporis a repellendus dicta
+            quidem amet.
+          </div>
+          <div class="col text-center">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur,
+            sunt. Rerum sequi minus adipisci voluptates. Inventore, iure
+            reiciendis accusantium molestias consectetur aliquam, obcaecati,
+            assumenda laboriosam quas maxime itaque veritatis beatae.
+          </div>
+          <div class="col text-center">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod,
+            delectus suscipit quo assumenda ipsum corporis, inventore enim
+            maxime reprehenderit laborum tempore necessitatibus possimus fugit.
+            Adipisci omnis expedita assumenda cumque laboriosam!
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
